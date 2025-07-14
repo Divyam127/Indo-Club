@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FC Titans - Team</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><span>⚽</span> INDO CLUB</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html" class="active">Team</a></li>
+        <li><a href="formation.html">Formation</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h2 class="section-title">Meet Our Squad</h2>
+    <div class="category-selector">
+      <div class="category" onclick="showGroup('main')">Main Players</div>
+      <div class="category" onclick="showGroup('veteran')">Veteran Players</div>
+      <div class="category" onclick="showGroup('future')">Future Talents</div>
+    </div>
+
+    <div id="main" class="card-container player-group">
+      <!-- Example Player Card -->
+      <div class="player-card">
+        <img src="images/justin4.jpg" alt="Player 1" style="height : 200px">
+        <h3>Justin Das</h3>
+        <p>DOB : 15-01-2007</p>
+        <p>Position: ST</p>
+      </div>
+      <div class="player-card">
+        <img src="images/baba4.jpg" alt="Player 1" style="height : 200px">
+        <h3>Anosh Baba Das</h3>
+        <p>DOB : 16-08-1995</p>
+        <p>Position: CF</p>
+      </div>
+      <div class="player-card">
+        <img src="images/divyamWeb.jpg" alt="Player 1" style="height : 200px">
+        <h3>Divyam Pandey</h3>
+        <p>DOB : 15-10-2003</p>
+        <p>Position: RM</p>
+      </div>
+      <div class="player-card">
+        <img src="images/rajS.jpg" alt="Player 1" style="height : 200px">
+        <h3>Rajvendra Sisodiya </h3>
+        <p>DOB : 26-11-2003</p>
+        <p>Position: ST</p>
+      </div>
+      <div class="player-card">
+        <img src="images/amanV2.jpg" alt="Player 1" style="height : 200px">
+        <h3>Aman Vishwakarma</h3>
+        <p>DOB : 29-03-2005</p>
+        <p>Position: GK</p>
+      </div>
+      <div class="player-card">
+        <img src="images/amanD2.jpg" alt="Player 1" style="height : 200px">
+        <h3>Aman Dhurve</h3>
+        <p>DOB : 29-08-2004</p>
+        <p>Position: LM</p>
+      </div>
+      <div class="player-card">
+        <img src="images/bobby2.jpg" alt="Player 1" style="height : 200px">
+        <h3>Edwin John</h3>
+        <p>DOB : 29-02-2000</p>
+        <p>Position: CAM</p>
+      </div>
+      <div class="player-card">
+        <img src="images/shubham3.jpg" alt="Player 1" style="height : 200px">
+        <h3>Shubham Pandey</h3>
+        <p>DOB : 27-03-2000</p>
+        <p>Position: RB</p>
+      </div>
+      <div class="player-card">
+        <img src="images/priyanshu2.jpg" alt="Player 1" style="height : 200px">
+        <h3>Priyanshu Singh Chouhan</h3>
+        <p>DOB : 20-12-2002</p>
+        <p>Position: CB</p>
+      </div>
+      <div class="player-card">
+        <img src="images/laddu.jpg" alt="Player 1" style="height : 200px">
+        <h3>Raj Raghuwanshi</h3>
+        <p>DOB : 30-03-2002</p>
+        <p>Position: CB</p>
+      </div>
+      <div class="player-card">
+        <img src="images/Amir.jpg" alt="Player 1" style="height : 200px">
+        <h3>Amir Khan</h3>
+        <p>DOB : 07-02-1994</p>
+        <p>Position: RW</p>
+      </div>
+      <div class="player-card">
+        <img src="images/Kapil.jpg" alt="Player 1" style="height : 200px">
+        <h3>Kapil Tiwari</h3>
+        <p>DOB : 08-08-2002</p>
+        <p>Position: CDM</p>
+      </div>
+      <div class="player-card">
+        <img src="images/Nimit.jpg" alt="Player 1" style="height : 200px">
+        <h3>Nimit Tiwari</h3>
+        <p>DOB : 18-03-1999</p>
+        <p>Position: LB</p>
+      </div>
+      <!-- <div class="player-card">
+        <img src="images/priyanshu.jpg" alt="Player 1" style="height : 200px">
+        <h3>Abhishek Yadav</h3>
+        <p>DOB : 12-07-1999</p>
+        <p>Position: RW</p>
+      </div> -->
+      
+      <!-- Repeat 11 more cards here -->
+    </div>
+
+    <div id="veteran" class="card-container player-group" style="display:none">
+      <!-- 12 Veteran Player Cards -->
+      <div class="player-card">
+        <img src="images/masab.jpg" alt="Player 13" style="height : 200px">
+        <h3>Mr. Anil Sahu</h3>
+        <p>DOB: 21-09-1959</p>
+        <p>Position: CF</p>
+      </div>
+      <!-- Repeat 11 more cards here -->
+    </div>
+
+    <div id="future" class="card-container player-group" style="display:none">
+      <!-- 12 Future Talents Cards -->
+      <div class="player-card">
+        <img src="images/unknown.jpg" alt="Player 25">
+        <h3>Yugvansh Rajak</h3>
+        <p>DOB: 19-04-2008 </p>
+        <p>Position: N/A</p>
+      </div>
+      <div class="player-card">
+        <img src="images/unknown.jpg" alt="Player 25">
+        <h3>Ved Rajak</h3>
+        <p>DOB: 08-05-2009 </p>
+        <p>Position: N/A</p>
+      </div>
+      <div class="player-card">
+        <img src="images/unknown.jpg" alt="Player 25">
+        <h3>Aashish Ahirwar</h3>
+        <p>DOB: 09-05-2012 </p>
+        <p>Position: N/A</p>
+      </div>
+      <div class="player-card">
+        <img src="images/unknown.jpg" alt="Player 25">
+        <h3>Priyansh Awadhiya</h3>
+        <p>DOB: 28-03-2009 </p>
+        <p>Position: N/A</p>
+      </div>
+      <div class="player-card">
+        <img src="images/unknown.jpg" alt="Player 25">
+        <h3>Naitik Awadhiya</h3>
+        <p>DOB: 24-10-2009 </p>
+        <p>Position: N/A</p>
+      </div>
+      <div class="player-card">
+        <img src="images/unknown.jpg" alt="Player 25">
+        <h3>Tanmay Somkuwar</h3>
+        <p>DOB: 06-08-2011 </p>
+        <p>Position: N/A</p>
+      </div>
+      <div class="player-card">
+        <img src="images/unknown.jpg" alt="Player 25">
+        <h3>Ambar Awadhiya</h3>
+        <p>DOB: 16-04-2009 </p>
+        <p>Position: N/A</p>
+      </div>
+      <div class="player-card">
+        <img src="images/unknown.jpg" alt="Player 25">
+        <h3>Rudra Tiwari</h3>
+        <p>DOB: 20-02-2012 </p>
+        <p>Position: N/A</p>
+      </div>
+      <div class="player-card">
+        <img src="images/unknown.jpg" alt="Player 25">
+        <h3>Madan Kumre</h3>
+        <p>DOB: 25-07-2009 </p>
+        <p>Position: N/A</p>
+      </div>
+      <!-- Repeat 11 more cards here -->
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 INDO CLUB | Designed by Divyam Pandey
+  </footer>
+
+  <script>
+    function showGroup(groupId) {
+      const groups = ['main', 'veteran', 'future'];
+      groups.forEach(id => {
+        document.getElementById(id).style.display = (id === groupId) ? 'flex' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

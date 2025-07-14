@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FC Titans - Updates</title>
+  <style>
+    /* ======= HEADER ======= */
+header {
+  background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #FFD700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #FFD700;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover {
+  color: #FFD700;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  color: #FFD700;
+}
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #0F2027;
+      color: #ffffff;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #FFD700;
+      margin-bottom: 3rem;
+    }
+
+    .section-link {
+      display: block;
+      background-color: #1c1f26;
+      border: 2px solid #FFD700;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      text-decoration: none;
+      color: #ffffff;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .section-link:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px #FFD70088;
+    }
+
+    .section-link h2 {
+      margin-bottom: 1rem;
+      color: #FFD700;
+    }
+
+    .section-link p {
+      max-width: 600px;
+      margin: auto;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+    <header>
+    <div class="logo"><span>⚽</span> INDO CLUB</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="formation.html">Formation</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="updates.html" class="active">Updates</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Latest Updates</h1>
+
+    <a href="matches.html" class="section-link">
+      <h2>Match Updates</h2>
+      <p>Check previous match results and upcoming fixtures of INDO CLUB.</p>
+    </a>
+
+    <a href="events.html" class="section-link">
+      <h2>Club Events</h2>
+      <p>Explore past events, ongoing , and upcoming occasions.</p>
+    </a>
+
+    <a href="notices.html" class="section-link">
+      <h2>Notices & Announcements</h2>
+      <p>Stay updated with important notices and announcements from the club.</p>
+    </a>
+  </div>
+</body>
+</html>

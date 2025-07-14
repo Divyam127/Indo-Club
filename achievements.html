@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FC Titans - Achievements</title>
+  <style>
+    /* ======= HEADER ======= */
+header {
+  background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #FFD700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #FFD700;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover {
+  color: #FFD700;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  color: #FFD700;
+}
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #0F2027;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 100%;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+      color: #FFD700;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .tab {
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #FFD700;
+      background: #1c1f26;
+      color: #FFD700;
+      cursor: pointer;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .tab.active,
+    .tab:hover {
+      background: #FFD700;
+      color: #1c1f26;
+    }
+
+    .achievements {
+      display: none;
+      flex-direction: column;
+      gap: 3rem;
+      justify-content: center;
+    }
+
+    .achievements.active {
+      display: flex;
+    }
+
+    .achievement-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 1rem;
+      gap: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .achievement-row img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #FFD70099;
+    }
+
+    .achievement-content {
+      flex: 1;
+      text-align: center;
+    }
+
+    .achievement-content h2 {
+      color: #FFD700;
+      margin-bottom: 1rem;
+    }
+
+    .achievement-content p {
+      font-size: 1rem;
+      color: #ccc;
+      text-align: justify;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+    @media (max-width: 768px) {
+      .achievement-row,
+      .reverse {
+        flex-direction: column;
+      }
+
+      .achievement-content {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+    <header>
+    <div class="logo"><span>⚽</span> INDO CLUB</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="formation.html">Formation</a></li>
+        <li><a href="achievements.html" class="active">Achievements</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Our Achievements</h1>
+
+    <div class="tabs">
+      <div class="tab active" onclick="showAchievements('club')">Club Achievements</div>
+      <div class="tab" onclick="showAchievements('player')">Player Achievements</div>
+    </div>
+
+    <div id="club" class="achievements active">
+      <div class="achievement-row">
+        <img src="images/team8.jpg" alt="Achievement 1">
+        <div class="achievement-content">
+          <h2>Winner of Smriti Cup 2024</h2>
+          <p>Our club emerged victorious in the Thakur Harivansh Singh Smriti Cup , showcasing unparalleled teamwork and sportsmanship. Unlike previous year this time our team snatched this cup by beating 11 star in finals by 1-0. This win marks a significant milestone in the club's journey and has set a benchmark for future campaigns.</p>
+        </div>
+      </div>
+      <div class="achievement-row reverse">
+        <img src="images/team5.jpg" alt="Achievement 2">
+        <div class="achievement-content">
+          <h2>Smriti Cup 2023 - Runner Up</h2>
+          <p>In 2023 , our club successfully hosted the widely recognized Thakur Harivansh Singh Smriti Cup featuring over 16 competitive teams from whole district and other region . It was an event filled with enthusiasm, passion, and competitive spirit . Our own team participated in it and reached final of this tournament emerged as runner up . The tournament gained attention for its professional organization, vibrant crowd, and thrilling matches, boosting our reputation as both a formidable team and an excellent host.</p>
+        </div>
+      </div>
+      <div class="achievement-row">
+        <img src="images/team2.jpg" alt="Achievement 3">
+        <div class="achievement-content">
+          <h2>District Tournament 2018 - Shared Winners Trophy</h2>
+          <p>Our Sub-Juniour team emerged as and outstanding and youngest players team to touch the winners trophy. It was an tournament filled with enthusiasm, passion, and competitive spirit . The final was very competitive and was against Police Boys Bandol where we Drew the match with 0-0 even after the extra time . This trophy gave huge motivation to the future champions and 7 players of our team were selcted for the State championship held at Khandwa .</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="player" class="achievements">
+      <div class="achievement-row">
+        <img src="images/baba4.jpg" alt="Achievement 4">
+        <div class="achievement-content">
+          <h2>Anosh Baba Das</h2>
+          <p>Baba has been one of our most consistent performers over the years. He won Gold medal for Nationals and had played 4 times Nationals and 7 times state. He has trained many of the players during camps.</p>
+        </div>
+      </div>
+      <div class="achievement-row reverse">
+        <img src="images/priyanshu2.jpg" alt="Achievement 4 " >
+        <div class="achievement-content">
+          <h2>Priyanshu Singh Chouhan</h2>
+          <p>Priyanshu has been one of our best and most valuable player and one of the gratest defender of our club. He got gold medal for Nationals and had played 5 times nationals and over 8 times state. He has also represented Jivaji university on various National and State competitions. Priyanshu is also the Licensed Coach and AIFF 'D' License holder.</p>
+        </div>
+      </div>
+      <div class="achievement-row">
+        <img src="images/amanV2.jpg" alt="Achievement 5">
+        <div class="achievement-content">
+          <h2>Aman Vishwakarma</h2>
+          <p>Aman is the most finest and best Goalkeeper of our club. He played 2 nationals and 5 states till now. He has won many university and district championships. </p>
+        </div>
+      </div>
+      <div class="achievement-row reverse">
+        <img src="images/justin4.jpg" alt="Achievement 6" style="height: 400px">
+        <div class="achievement-content">
+          <h2>Justin Das</h2>
+          <p>Justin’s dedication and fitness levels earned him a spot in the National Football Camp 2021. He has played over 2 times Nationals and 7 states and performed outstanding . He has also played for MPFA and won various medals. </p>
+        </div>
+      </div>
+      <div class="achievement-row">
+        <img src="images/divyamWeb.jpg" alt="Achievement 6" style="height: 400px">
+        <div class="achievement-content">
+          <h2>Divyam Pandey</h2>
+          <p>Divyam has been one of our finest mid player . He has played over 2 times Nationals and 5 times state. He also represented his college on various tournaments including IIT BHU and has won many medals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showAchievements(category) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.achievements').forEach(sec => sec.classList.remove('active'));
+
+      document.querySelector(`.tab[onclick*="${category}"]`).classList.add('active');
+      document.getElementById(category).classList.add('active');
+    }
+  </script>
+</body>
+</html>

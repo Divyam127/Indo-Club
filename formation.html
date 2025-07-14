@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FC Titans - Formations</title>
+  <style>
+    /* ======= HEADER ======= */
+header {
+  background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #FFD700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #FFD700;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover {
+  color: #FFD700;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  color: #FFD700;
+}
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #0F2027;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .tab {
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #FFD700;
+      background: #1c1f26;
+      color: #FFD700;
+      cursor: pointer;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .tab.active,
+    .tab:hover {
+      background: #FFD700;
+      color: #1c1f26;
+    }
+
+    .formation-img {
+      display: none;
+      max-width: 100%;
+      border: 4px solid #FFD700;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .formation-img.active {
+      display: block;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+    <header>
+    <div class="logo"><span>⚽</span> INDO CLUB</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="formation.html" class="active">Formation</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Team Formations</h1>
+
+    <div class="tabs">
+      <div class="tab active" onclick="showFormation('main')">Main</div>
+      <div class="tab" onclick="showFormation('attacking')">Attacking</div>
+      <div class="tab" onclick="showFormation('defensive')">Defensive</div>
+      <div class="tab" onclick="showFormation('balanced')">Balanced</div>
+    </div>
+
+    <div id="main" class="formation-img active">
+      <img src="images/main-433.jpg" alt="Main 4-3-3 Formation" style="width: 80%;">
+    </div>
+
+    <div id="attacking" class="formation-img">
+      <img src="images/attack-352.jpg" alt="Attacking 3-5-2 Formation" style="width: 80%; margin-bottom: 1rem;">
+      <img src="images/attack-343.jpg" alt="Attacking 3-4-3 Formation" style="width: 80%;">
+    </div>
+
+    <div id="defensive" class="formation-img">
+      <img src="images/defense-532.jpg" alt="Defensive 5-3-2 Formation" style="width: 80%; margin-bottom: 1rem;">
+      <img src="images/defense-4231.jpg" alt="Defensive 4-2-3-1 Formation" style="width: 80%;">
+    </div>
+
+    <div id="balanced" class="formation-img">
+      <img src="images/balance-442.jpg" alt="Balanced 4-4-2 Formation" style="width: 80%; margin-bottom: 1rem;">
+      <img src="images/balance-41212.jpg" alt="Balanced 4-2-2-2 Formation" style="width: 80%;">
+    </div>
+  </div>
+  
+
+  <script>
+    function showFormation(id) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.formation-img').forEach(img => img.classList.remove('active'));
+
+      document.querySelector(`.tab[onclick*="${id}"]`).classList.add('active');
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>

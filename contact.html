@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FC Titans - Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    /* ======= HEADER ======= */
+header {
+  background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #FFD700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #FFD700;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover {
+  color: #FFD700;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  color: #FFD700;
+}
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #0F2027;
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 3rem 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #FFD700;
+      margin-bottom: 3rem;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+
+    .contact-form {
+      flex: 1 1 48%;
+      background: #1c1f26;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+      color: #FFD700;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      background: #0F2027;
+      border: 2px solid #FFD70055;
+      border-radius: 6px;
+      color: white;
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #FFD700;
+    }
+
+    .contact-form button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 2rem;
+      background-color: #FFD700;
+      color: #0F2027;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #FFD700aa;
+    }
+
+    .contact-info {
+      flex: 1 1 48%;
+      background: #1c1f26;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .info-box {
+      margin-bottom: 1.5rem;
+    }
+
+    .info-box h3 {
+      color: #FFD700;
+      margin-bottom: 0.3rem;
+    }
+
+    .info-box p {
+      margin: 0;
+      color: #ccc;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin-right: 1rem;
+      font-size: 1.3rem;
+      color: #FFD700;
+      transition: transform 0.3s;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+    <header>
+    <div class="logo"><span>⚽</span> INDO CLUB</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="formation.html">Formation</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Get In Touch With INDO CLUB</h1>
+    <div class="contact-wrapper">
+
+      <div class="contact-form">
+        <form>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Your full name">
+
+          <label for="father">Father's Name</label>
+          <input type="text" id="father" placeholder="Your father's name">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="your@email.com">
+
+          <label for="contact">Contact Number</label>
+          <input type="tel" id="contact" placeholder="e.g., +91 98765 43210">
+
+          <label for="position">Preferred Position</label>
+          <input type="text" id="position" placeholder="e.g., Striker, Goalkeeper">
+
+          <label for="foot">Strong Foot</label>
+          <input type="text" id="foot" placeholder="Right / Left">
+
+          <label for="vision">Why do you want to join INDO CLUB?</label>
+          <textarea id="vision" rows="4" placeholder="Describe your vision and goals..."></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <div class="info-box">
+          <h3>Address</h3>
+          <p>Shubhash Ground (Bade Ground) , Lalmati <br> Chhapara , India</p>
+        </div>
+
+        <div class="info-box">
+          <h3>Phone</h3>
+          <p>+91 9009337737</p>
+        </div>
+
+        <div class="info-box">
+          <h3>Email</h3>
+          <p>info.indoclub@gmail.com</p>
+        </div>
+
+        <div class="info-box">
+  <h3>Follow Us</h3>
+  <div class="social-links">
+    <a href="https://www.instagram.com" title="Instagram">
+      <img src="images/instagramPhoto.jpg" alt="Instagram" width="25" height="25">
+    </a>
+    <a href="https://www.youtube.com" title="YouTube">
+      <img src="images/youtubePhoto.jpg" alt="YouTube" width="25" height="25">
+    </a>
+    <a href="https://www.facebook.com" title="Facebook">
+      <img src="images/facebookPhoto.jpg" alt="Facebook" width="25" height="25">
+    </a>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
