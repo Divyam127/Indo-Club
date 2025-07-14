@@ -183,6 +183,36 @@ nav a {
       margin: auto;
       color: #ccc;
     }
+    /* Navigation underline effect */
+nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Hover golden line */
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: gold;
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Active state: keeps underline */
+nav a.active::after {
+  width: 100%;
+}
+
   </style>
   <script defer src="js/script.js"></script>
 
