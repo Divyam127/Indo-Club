@@ -161,7 +161,10 @@ header {
 
 /* ======= PLAYER CARD ZOOM & BLUR EFFECT ======= */
 .card-container {
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
 }
 
 .player-card {
